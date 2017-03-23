@@ -2,139 +2,343 @@
 <html>
 <head>
    <title>Demo of baidu</title>
+   <meta charset="utf-8">
+   <style type="text/css">
+      body{
+        background-color: lightgray;
+        padding-top: 60px;
+        margin: 0px 8px;
+      }
+   		.header{
+   			width: 100%;
+   			background-color: rgba(100,80,50,0.8);
+   			height: 60px;  
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 20;
+   		}   
+   		.head-navi{
+   			float: right;
+   		}		
+   		.head-navi li{
+   			float: left;
+   		}
+   		.head-navi a{
+   			color: white;
+   			font-size: 15px;
+   			margin-right: 40px;
+        text-decoration: none;
+   		}
+   		.header>img{
+   			height: 40px;
+   			margin-top: 10px;
+   			margin-left: 30px;
+   		}
+   		.head-navi a:hover{
+   			color: gray;
+      }
+      .content{
+        left: 0;
+        margin: 10px;
+      }
+      .content h3, .content h4{
+        color: gray;
+      }
+      .article{
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px outset;
+        background-color: white;
+      }
+      .article>ul{
+        list-style-type: none;
+      }
+      .article>table{
+        width: 100%;
+      }
+      .article td{
+
+      }
+      .pic-wrap{
+        width: 200px;
+        left:50px;
+        position: relative;
+        border: 1px solid;
+        margin: 20px;
+      }
+      .pic-wrap>img{
+        height: 100px;
+        margin: 20px;
+      }
+      .pic-wrap>label{
+        width: 100%;
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
+      .table-first {
+        background-color: green;
+        color: white;
+      }
+      .table-last {
+        background-color: gray;
+      }
+      #sidebar-title{
+        border-left: 3px solid;
+        border-color: lightgray;
+        padding: 5px 10px;
+        margin: auto;
+      }
+      #sidebar-title>h3{
+        margin: 0;
+      }
+      .sidebar-content{
+        width: 60%;
+        margin: auto;
+      }
+      .sidebar-content .hint{
+        color: lightgray;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+      .sidebar-content .desc{
+        text-align: right;
+      }
+      .sidebar-content input[type='submit']{
+        height: 25px;
+        margin: auto;
+        width: 100%;
+        background-color: rgb(65, 105, 225);
+        border: 2px solid;
+        border-color: rgb(65, 105, 225); 
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      #footer{
+        position: relative;
+        height: 60px;
+        text-align: center;
+        background-color: black;
+        color: white;
+        bottom: 0;
+      }
+      #footer label{
+        display: inline-block;
+        margin-top: 20px;
+      }
+   </style>
 </head>
 
 <body>
-   <h1>First Header of website</h1>
-   <ul>
-      <li>
-	 	<a href="#first">Navi link one</a>
-      </li>
-      <li>
-		<a href="#second">Navi link two</a>
-      </li>
-      <li>
-		<a href="#third">Navi link three</a>
-      </li>
-      <li>
-		<a href="#forth">Navi link three</a>
-      </li>
-   </ul>
+	<div class="header">
+		<img src="images/google.png">
+		<div class="head-navi">
+			<ul>
+	    	  <li>
+			 	<a href="#first">Navi link one</a>
+	    	  </li>
+	    	  <li>
+				<a href="#second">Navi link two</a>
+	    	  </li>
+	    	  <li>
+				<a href="#third">Navi link three</a>
+	    	  </li>
+	    	  <li>
+				<a href="#forth">Navi link four</a>
+	    	  </li>
+	   		</ul>
+		</div>
+	</div>
+  <div class="content">
+    <div class="article article-first">
+        <h2 id="first">First header of article</h2>
+        <h3>Second header of article</h3>
+        <h4>author publish_time</h4>
+        <p>　　全角空格测试&nbsp&nbspThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long     passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very  long    passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very  very long   passage</p>
+        <image src="images/flower.jpg" alt="flower pic">
+        <p>This is a long passage.This is a long passage.This is a long passage.This is a long passage.</p>
+        <p id="1">This is a link <strong>Bold font</strong><a href="http://ife.baidu.com" target="_blank">A link</a>
+        </p>
+    </div>
+    <div class="article">
+     <h2 id="second">First header for another article</h2>
+     <h3>Second header of the aricle</h3>
+     <h4>author publish_date</h4>
+     <p>&nbsp&nbspThis is a very long passage and this is a link <a href="http://ife.baidu.com">the link</a></p>
+     <img src="images/flower.jpg">
+     <ul>
+     	<li>Item one</li>
+     	<li>Item two</li>
+     	<li>Item three</li>
+     </ul>
+    </div>
+    <div class="article">
+     <h2 id="third">image</h2>
+      <div class="pic-wrap">
+        <label>beautiful pic</label>
+        <img src="images/flower.jpg">
+      </div>
+      <div class="pic-wrap">
+         <label>beautiful pic</label>
+        <img src="images/flower.jpg">
+      </div>
+      <div class="pic-wrap">
+         <label>beautiful pic</label>
+        <img src="images/flower.jpg">
+      </div>
+      <div class="pic-wrap">
+         <label>beautiful pic</label>
+        <img src="images/flower.jpg">
+      </div>
+      <div class="pic-wrap">
+         <label>beautiful pic</label>
+        <img src="images/flower.jpg">
+      </div>
 
-   <h2 id="first">First header of article</h2>
-   <h2>Second header of article</h2>
-   <p>author publish_time</p>
-   <p>This is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passageThis is a very very long passage</p>
-   <image src="images/flower.jpg" alt="flower pic">
-   <p>This is a long passage.This is a long passage.This is a long passage.This is a long passage.</p>
-   <p id="1">This is a link <strong>Bold font</strong><a href="http://ife.baidu.com" target="_blank">A link</a>
-   </p>
+    </div>
 
-   <h2 id="second">First header for another article</h2>
-   <h2>Second header of the aricle</h2>
-   <p>auther publish_date</p>
-   <p>This is a very long passage and this is a link <a href="http://ife.baidu.com">the link</a></p>
-   <img src="images/flower.jpg">
-   <ul>
-   	<li>Item one</li>
-   	<li>Item two</li>
-   	<li>Item three</li>
-   </ul>
+    <div class="article">
+      <h2 id="forth">First header of the third article</h2>
+      <h3>Second header of the article</h3>
+      <h4>author publish_date</h4>
+      <ol>
+      	<li>rank one</li>
+      	<li>rank two</li>
+      	<li>rank three</li>
+      </ol>
+      <p>below is a table</p>
+      <table border="1">
+      <tr class="table-first">
+      	<td>header</td>
+      	<td>header</td>
+      	<td>header</td>
+      </tr>
+      <tr>
+      	<td>content of the table</td>
+      	<td>content of the table</td>
+      	<td><a href="#">operation</a></td>
+      </tr>
+      <tr>
+      	<td>content of the table</td>
+      	<td>content of the table</td>
+      	<td><a href="#">operation</a></td>
+      </tr>
+      <tr>
+      	<td>content of the table</td>
+      	<td>content of the table</td>
+      	<td><a href="#">operation</a></td>
+      </tr>
+      <tr>
+      	<td>content of the table</td>
+      	<td>content of the table</td>
+      	<td><a href="#">operation</a></td>
+      </tr>
+      <tr class="table-last">
+      	<td>in total</td>
+      	<td colspan="2">1000</td>
+      </tr>
+      </table>
+    </div>
+    <div class="article">
+      <div id="sidebar-title">
+        <h3>the title of the sidebar</h3>
+      </div>
+      
+      <div class="sidebar-content">
+        <form>
+          <table>
+            <tr>
+              <td class="desc">
+                <label>input e-mail address &nbsp</label>
+              </td>
+              <td>
+                <input type="text" name="email" placeholder="this is a input text">
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <label class="hint">please input according to the format</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">
+                <label>input passwd &nbsp</label>
+              </td>
+              <td>
+                <input type="password" name="email" placeholder="this is a input text">
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">
+                <label>repeat password &nbsp</label>
+              </td>
+             <td>
+               <input type="password" name="email" placeholder="this is a input text">
+             </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <label class="hint">passwd should be num</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">
+                <label>gender &nbsp</label>
+              </td>
+              <td>
+                <input type="radio" name="gender" value="male" checked>
+                <label>male</label>
+                <input type="radio" name="gender" value=" female">
+                <label>female</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">
+                <label>city &nbsp</label>
+              </td>
+              <td>
+                <select>
+                  <option value="1">Beijing</option>
+                  <option value="2">Nanjing</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">
+                <label>hobby &nbsp</label>
+              </td>
+              <td>
+                <input type="checkbox" name="hobby">
+                <label>sport</label>
+                <input type="checkbox" name="hobby">
+                <label>art</label>
+                <input type="checkbox" name="hobby">
+                <label>science</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">
+                <label>personal description &nbsp</label>
+              </td>
+              <td>
+                <textarea placeholder="input your personal description" name="ps-desc"></textarea>
+              </td>
+            </tr>
+          </table>
+        	<input type="submit" value="confirm">
+        </form>
+        <br>
+      </div>
+    </div>
 
-   <h2 id="third">image</h2>
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
-   	<p>beautiful pic</p>
-   	<img src="images/flower.jpg">
+    <div id='footer'>
+      <label>copyright@</label>
+    </div>
 
-  <h2 id="forth">First header of last article</h2>
-  <h2>Second header of the article</h2>
-  <p>author publish_date</p>
-  <ol>
-  	<li>rank one</li>
-  	<li>rank two</li>
-  	<li>rank three</li>
-  </ol>
-  <p>below is a table</p>
-  <table border="1">
-  <tr>
-  	<td>header</td>
-  	<td>header</td>
-  	<td>header</td>
-  </th>
-  <tr>
-  	<td>content of the table</td>
-  	<td>content of the table</td>
-  	<td><a href="#">operation</a></td>
-  </tr>
-  <tr>
-  	<td>content of the table</td>
-  	<td>content of the table</td>
-  	<td><a href="#">operation</a></td>
-  </tr>
-  <tr>
-  	<td>content of the table</td>
-  	<td>content of the table</td>
-  	<td><a href="#">operation</a></td>
-  </tr>
-  <tr>
-  	<td>content of the table</td>
-  	<td>content of the table</td>
-  	<td><a href="#">operation</a></td>
-  </tr>
-  <tr>
-  	<td>in total</td>
-  	<td colspan="2">1000</td>
-  </tr>
-  </table>
-  <h2>the title of the sidebar</h2>
-  <h2>register window title</h2>
-  <label>input e-mail address:&nbsp</label>
-  <input type="text" name="email" placeholder="this is a input text">
-  <p>please input according to the format</p>
-  <label>input passwd: &nbsp</label>
-  <input type="password" name="email" placeholder="this is a input text">
-  <label>repeat password: &nbsp</label>
-  <input type="password" name="email" placeholder="this is a input text">
-  <p>passwd should be num</p>
-  <form>
-  	<label>gender: &nbsp</label>
-  	<input type="radio" name="gender" value="male" checked>
-  	<label>male</label>
-  	<input type="radio" name="gender" value="	female">
-  	<label>female</label>
-  	<label>city</label>
-  	<select>
-  		<option value="1">Beijing</option>
-  		<option value="2">Nanjing</option>
-  	</select>
-  	<label>hobby: &nbsp</label>
-  	<input type="checkbox" name="hobby">
-  	<label>sport</label>
-  	 <input type="checkbox" name="hobby">
-  	<label>art</label>
-  	 <input type="checkbox" name="hobby">
-  	<label>science</label>
-  	<label>personal description: &nbsp</label>
-  	<textarea placeholder="input your personal 	description"></textarea>
-  	<input type="submit" value="confim">
-  </form>
-  <br>
-  <label>copyright©</label>
+  </div>
 </body>
 
 </html>
